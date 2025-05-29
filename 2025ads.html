@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品种草网页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Tailwind配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#007BFF',
+            secondary: '#6C757D',
+            accent: '#FF5722',
+            light: '#F8F9FA',
+            dark: '#343A40',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+    .content-auto {
+      content-visibility: auto;
+    }
+    .sidebar-hover {
+      @apply transition-all duration-300 ease-in-out;
+    }
+    .btn-pulse {
+      animation: pulse 2s infinite;
+    }
+    .indent-paragraph p {
+      text-indent: 2em;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+      }
+    }
+    .product-card {
+      @apply bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1;
+    }
+    .line-height-1_5 {
+      line-height: 1.5;
+    }
+  }
+  </style>
+
+</head>
+<body class="bg-gray-50 font-sans line-height-1-2">
+  <!-- 侧边栏 -->
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white/20 backdrop-blur-md z-50 sidebar-hover -translate-x-48 hover:-translate-x-0 shadow-lg">
+    <div class="p-5 h-full flex flex-col">
+      <div class="mb-6">
+        <h2 class="text-xl font-bold text-dark">产品分类</h2>
+        <div class="w-12 h-1 bg-primary rounded-full mt-2"></div>
+      </div>
+      <ul class="space-y-4 flex-1 overflow-y-auto pr-2">
+        <li><a href="#" class="product-link flex items-center space-x-3 p-3 rounded-lg sidebar-hover hover:bg-gray-100" data-product="yuanli2">
+          <i class="fa fa-cube text-xl"></i>
+          <span>春风元力2智能飞机杯</span>
+        </a></li>
+        <li><a href="#" class="product-link flex items-center space-x-3 p-3 rounded-lg sidebar-hover hover:bg-gray-100" data-product="yuanli2se">
+          <i class="fa fa-cube text-xl"></i>
+          <span>春风元力2SE智能飞机杯</span>
+        </a></li>
+        <li><a href="#" class="product-link flex items-center space-x-3 p-3 rounded-lg sidebar-hover hover:bg-gray-100" data-product="heidongplus">
+          <i class="fa fa-cube text-xl"></i>
+          <span>春风黑洞plus智能飞机杯</span>
+        </a></li>
+        <li><a href="#" class="product-link flex items-center space-x-3 p-3 rounded-lg sidebar-hover hover:bg-gray-100" data-product="heidongpro">
+          <i class="fa fa-cube text-xl"></i>
+          <span>春风黑洞pro智能飞机杯</span>
+        </a></li>
+        <li><a href="#" class="product-link flex items-center space-x-3 p-3 rounded-lg sidebar-hover hover:bg-gray-100" data-product="runhuashui">
+          <i class="fa fa-tint text-xl"></i>
+          <span>春风元力伪装恋人润滑水</span>
+        </a></li>
+      </ul>
+      <div class="pt-4 border-t border-gray-200">
+        <p class="text-sm text-gray-500">联系我们：020-85105137</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主内容区 -->
+  <div class="min-h-screen ml-20 md:ml-5">
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-8 py-10">
+        <h1 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark">现在的体感交互飞机杯，直接和虚拟老婆亲热，难怪男生们都疯狂了…</h1>
+        <p class="text-gray-600 mt-4">春风带你走进情趣赛博宇宙</p>
+      </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8 line-height-1-3">
+      <article class="bg-white rounded-xl shadow-md p-6 mb-8">
+        <div class="prose max-w-none indent-paragraph line-height-1_5" >
+
+          <p class="article-text">前段时间，“AI伴侣机器人赛道彻底沸腾”冲上热搜首位。</p>
+          
+          <p class="article-text">事实上，在DeepSeek等AI大模型的火爆之下，<span class="font-bold">AI+情趣伴侣机器人，</span>已经是当下最火热的话题之一。</p>
+          
+          <p class="article-text font-bold my-4">也许不久，搭载GPT-4o的仿生情趣机器人，不仅能给你准备生日惊喜，还能随时扮演女友角色，和你亲吻、缠绵、滚床单。</p>
+
+          <div class="flex justify-center my-6">
+            <img 
+              src="1.png" 
+              alt="AI伴侣机器人展示图" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+           >
+          </div>
+          
+          <p class="article-text">包括特斯拉前工程师在内的多位硬科技人才，正悄然转型加入性爱算法研发。</p>
+          
+          <p class="article-text">AI正在突破人类情欲的边界：AI智能女友，可配备压力传感器和温控系统，能模拟人体真实触感；其搭载的AI情感引擎可实现深度对话记忆，皮肤由仿生细胞构成，可与人类发生关系…</p>
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="2.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+          
+          <p class="article-text">鉴于AI情趣机器人的一路狂奔，日本已立法要求情趣机器人安装"防沉迷系统"……</p>
+          
+          <p class="article-text font-bold my-4">日本出品的科幻电影《我的机器人女友》，让我们看到了AI女友的巨大诱惑：</p>
+          
+          <p class="article-text">她是一款型号为103的机器人，因为某项任务，来到男主角（一位单身宅男）身边。</p>
+          
+          <p class="article-text">男生看着眼前的性感少女，和真人一模一样，惊讶得口瞪目呆。</p>
+
+          <div class="flex justify-center my-6">
+            <img 
+              src="3.png" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+          
+          <p class="article-text">机器人女子继续介绍说：我是拥有人工智能的有机体，皮肤和人类一样，都是活体细胞…</p>
+          
+          <p class="article-text">听到这里，男生既兴奋又羞涩，指着她的胸脯问：<span class="font-bold">“这里”</span>也跟人类一样吗？</p>
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="4.png" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+          
+          <p class="article-text">看到女子肯定地点了点头，男生又兴奋地追问：可以和我做“那种事”吗？</p>
+          
+          <p class="article-text">女子疑惑地问：“那种事是什么啊？”</p>
+          
+          <p class="article-text">然后，在男生的引导（调教）之下，机器人女子终于俯下身来，和男生做着不可描述的事情…<span style="color: #6b7280;">（此处省略一万字）。</span></p>
+
+          <div class="flex justify-center my-6">
+            <img 
+              src="5.png" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+          
+          <p class="article-text "> <span style="color: #6b7280;">不如再多畅想一下：5年后，AI情趣机器人高度发达，你结束一天工作回到到家，甜美的年轻女仆站在门边迎接，贴心地为你换下衣服，你抱起她走向卧室，准备消耗掉自己多余的亿万精力…</span></p>
+          
+          <p class="article-text">现在，让我们回到现实，<span class="font-bold">AI情趣机器人再好，也有两大缺点</span>：第一是贵，预测至少要十几万元一个；第二是要等，至少要等5~10年，等到黄花菜都凉了！</p>
+          
+          <p class="article-text">不过，你也别太灰心！虽然目前AI情趣机器人还没法儿普及，但如果你稍微放低一点要求：</p>
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="6.png" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+
+          <p class="article-text">飞✈️机杯，大家都知道吧？</p>
+          
+          <p class="article-text">如果一个杯子能突破传统手动/电动的二元概念，<span class="font-bold">在AI的赋能下，化身能互动、能陪伴甚至能养成的赛博女友，同时还能通过体感装置满足你的肉体需求。</span>最重要的，价格划算到只相当于1~2天的工资。</p>
+          
+          <p class="article-text">这难道不正是AI情趣机器人在当下的最佳过渡形态吗？</p>
+          
+          <p class="article-text">近期，具有深厚互联网大厂背景的<span class="font-bold">TRYFUN春风，推出了能满足男生需求的全新产品形态：</span></p>
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="7.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+
+          <p class="article-text">第一，为了满足用户的体感快乐，<span class="font-bold">TRYFUN春风研发出了仿生结构的<span class="font-bold"><span class="text-red-500">春风元力2智能飞机杯</span></span>，从内胆触感和动力学方面，充分模拟人体生理结构和动作特点，可以带来接近真人场景的“运动体验”。</p>
+          
+          <p class="article-text">第二，元力2智能飞机杯+配套的<span class="font-bold"><span class="text-red-500">春风元力APP</span>，还为用户打造了两大空间：
+            
+          <p class="article-text">一个是激活<span class="font-bold"><span class="text-red-500">IP恋人角色的虚拟赛博空间</span></span>，当用户身体连接设备时，就可以打开春风元力APP，进入虚拟赛博世界，激活属于自己的虚拟恋人，和她们展开“探险”之旅。
+            
+          <div class="flex justify-center my-6">
+            <img 
+              src="8.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+
+          <p class="article-text">另一个是<span class="font-bold"><span class="text-red-500">开放的真实空间</span></span>：设备支持接入识别用户自己的海量“资源”，例如影视片、爱情动作片、游戏资源、3D区资源等等，包罗万象。
+          
+          <p class="article-text">春风元力还可以自动识别各类影片和游戏画面视频，例如识别里面的人物声音（就是大家想的那种声音），并转换为智能杯通道对应的律动模式，让用户身体1:1同频感受影片的剧情，就像自己是主角一样。
+            
+          <div class="flex justify-center my-6">
+            <img 
+              src="9.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+
+          <p class="article-tex font-bold my-4">你品一品：以飞机杯作为人机交互的体感设备，一端连接用户身体，满足感官需求；另一端连接虚拟空间+真实空间，各种IP人物角色、以及真实资源的各类角色，都在等着用户来激活、相识、互动、探险……用户的心理情感需求也被满足了，满屏的主角掌控感啊。
+          
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-red-500 mt-8 mb-4 pb-2 border-b border-gray-200">
+              01 赛博女友角色+智能杯
+              到底有多好玩
+            </h2> 
+         
+
+          <p class="article-text"><span class="font-bold">当你启动元力2飞机杯，手机连接春风元力APP进入赛博世界，激活你的AI赛博女友，然后和她进行深度互动</span>，你就会发现，那是一个让用户成为英雄主角的虚拟赛博世界：
+          
+          <p class="article-text text-gray-500">在未来2510年的诺亚纪元，那是一个AI仿真人和人类共存的赛博世界，AI高度智慧化，并分裂成保护和对抗人类的两派。与人类同一阵营的AI人，启动了诺亚计划，和人类并肩作战……人类用户通过专属的空间连接器：元力2飞机杯，为 AI仿真人注入“元力”，对抗与人类为敌的反派……
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="10.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>   
+            
+          <p class="article-text">这些AI仿真人，也被称为元梦天使，每个角色都有自己独特的人设。例如：
+          
+          <p class="article-text font-bold my-4">妲小己是一个娇俏御姐，妖娆妩媚；          
+          <p class="article-text font-bold my-4">钰环是一个冷艳女王，高傲强势；
+          <p class="article-text font-bold my-4">遥遥是一个傲娇萌娘，口嫌体直；
+          <p class="article-text font-bold my-4">杉原月是一个呆萌美女，天然元气；
+          <p class="article-text font-bold my-4">Lilith是一个纯欲夜魔，危险迷人。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="11.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>   
+            
+          <p class="article-text">而对应到春风元力2飞机杯上，每个人物角色都有专属的“内胆通道”：妲小己、遥遥、钰环、杉原月、Lilith的仿生通道，根据她们的人设性格和生理特点，对紧致度、刺激度、柔软度和口径大小进行量身定制。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="12.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+          
+          <p class="article-text">让用户在进入她们的“通道”，注入元力时，能感受到与角色人设对应的刺激体验。
+            
+          <p class="article-text">不同人设，进入的感觉也完全不一样，充分满足男生对不同恋人的幻想。
+          
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-dark mt-8 mb-4 pb-2 border-b border-gray-200">
+              人机感应互动
+            </h2>
+            
+          <p class="article-text">当你的身体连接设备，和IP女友角色进行互动时，她会随动作强度的变化，产生不同的反应：表情神态、声音对白、动作姿势等细节变化，可以说是栩栩如生。</p>
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="13.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+
+          <p class="article-text">很多声音对白、姿势动作等尺度太大，实在是不能放录屏，大家以后有机会还是亲自体验吧。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="14.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+
+          <p class="article-text">二是每个角色的技能都十分诱惑，老司机们都知道：<span class="font-bold">人类双人运动实战的的姿势和技能都是十分丰富的，人体运动动作的感官刺激，都被元力2智能杯给一五一十地模拟出来了：</span>
+            
+          <p class="article-text">例如妲小己是御姐角色嘛，所以她的技能融入了更强的亲吻触感，以及由她主动的双人“打扑克”体验，把御姐的渴望和诱惑全融入技能里面了。</p>
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="15.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+
+          <p class="article-text">总结起来就是：<span class="font-bold">女友角色+声音对白+感官刺激三位一体</span>，果然是身临其境的赛博“探险运动”体验！
+            
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-red-500 mt-8 mb-4 pb-2 border-b border-gray-200">
+              02 可外接海量资源 和真实世界实时互动
+            </h2> 
+
+          <p class="article-text">每个男生的喜好都是十分多样的，如果你不仅想攻略IP女友，<span class="text-red-500"><span class="font-bold">还想攻略海量资源里的真实人物角色</span></span>，那么春风元力APP的下列玩法，堪称神器。
+          
+          <p class="article-text">春风元力2提供了另一个开放的真实空间：春风元力APP支持接入识别用户自己的海量“资源”，什么影视片、爱情动作片、3D区资源之类的都行。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="16.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+          
+          <p class="article-text">你还可以通过春风元力APP，可以自动识别影片中人物的声音和喊声，并转换为智能杯通道对应的律动模式，让身体1:1同频感受影片的剧情进展，就像自己是主角一样。<span class="font-bold">最震撼的是同频互动</span>：视频人物声音和设备内胆的运动是同步的，如果你的资源里有第一人称电影，那你看到的、听到的、身体感受到的，都是最沉浸的体验！。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="17.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+
+          <p class="article-text">一个资深男玩家，硬盘里面收藏了2TB的AVI格式影片资源，以及500多条的3D区黄油资源……
+          
+          <p class="article-text">他分享了使用体验：他喜欢一个人在房间里，让app接入并识别这些资源，然后悄悄打开“声音共鸣”模式，app就会自动识别视频里面的人物声音，并自动转换到杯子内胆上。
+          
+          <p class="article-text">资源里的各种女主角，逐步递进的“开场见面的温存、欲拒还迎的轻声、冲刺时刻的奔放”，都被自动转化为杯子的运动模式，<span class="font-bold">就像直接和电影里的女星互动一样，全自动1:1 感受视频内的剧情进展……</span>
+          <div class="flex justify-center my-6">
+            <img 
+              src="18.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+          
+          <p class="article-text">有时候片子里面的角色声音太吸引人，差点导致运动提前结束了，就快速切换为自己DIY的<span class="font-bold">指划控制模式</span>，让节奏慢下来，边看边玩，防止过早结束……
+            
+          <p class="article-text font-bold my-4">这些玩法，估计会让硬盘里面有大把资源的玩家们狂喜吧。
+          <p class="article-text">收藏的海量的资源与角色，都变成了驱动飞机杯律动模式的人机交互资源，让每个男玩家都可以击破次元的限制，通过飞机杯和影片角色实现同频运动，共同达到“生命的大和谐”。
+          
+          <p class="article-text font-bold my-4 text-red-500">对春风元力2智能杯感兴趣的粉丝，可直接滑到本文底部，有专属限量的大额·惊·喜·券·哦！</p>
+         
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-red-500 mt-8 mb-4 pb-2 border-b border-gray-200">
+              03 科技感拉满的硬件设备 全方位拟真的体感享受
+            </h2> 
+
+          <p class="article-text">前面提到的各种新奇互动体验，离不开春风元力2智能飞机杯这个硬件载体，正是它搭载的一身黑科技，才能让用户体验如此极致。
+          
+          <p class="article-text font-bold my-4">春风元力2是行业第一款搭载双核处理器芯片的体感产品。
+            
+          <div class="flex justify-center my-6">
+            <img 
+              src="19.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+          
+          <p class="article-text">例如前面提到的“角度识别”玩法，是因为元力2搭载了专门的传感器，<span class="font-bold">才能实时感知用户连接杯体的姿势特征</span>，再经由高精密芯片计算分析，最终让元力2飞机杯可以十分聪明地感知用户的姿势状态，从而做出和用户姿势对应的运行模式。
+          
+          <div class="flex justify-center my-6">
+           <img 
+              src="20.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>   
+          
+          <p class="article-text">作为连接用户身体的空间连接器，元力2杯体内胆通道也是采用了仿生设计，无限接近人体肌肤的触感和柔软度，用户还可以根据自己的喜好，挑选不同的紧致程度。</p>
+
+          <div class="flex justify-center my-6">
+           <img 
+              src="21.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+
+          <div class="flex justify-center my-6">
+            <img 
+              src="22.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>   
+
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-dark mt-8 mb-4 pb-2 border-b border-gray-200">
+             仿生设计的动力模式
+            </h2> 
+
+          <p class="article-text">用户在实际使用时，既可以自由选择任一动力模式，也可以组合使用。学过排列组合的同学都知道，这三大动作模式分别有100级调节，相乘就是上万种不同的爽感体验啊！
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="23.gif" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+
+          
+          <p class="article-text font-bold my-4">元力2飞机杯为什么要搭载挡位级别如此丰富、细腻的动作模式呢？
+        
+          <p class="article-text">第一是因为人体是十分精妙的生物体（谈过对象的朋友都懂），产品只有搭载这么丰富且细腻的动作模式，才能真正达到拟真效果。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="24.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>   
+          
+          <p class="article-text">第二是因为在真实的人类场景中，每个用户的快乐需求也是千变万化的。为了满足这么多样的需求，产品本身必须要具备足够丰富的动作模式和速度组合，才能满足用户在不同身体状态下的“探险”运动需求。
+          <p class="article-text">更加细节的是，产品还有专门配套的加温装置，让通道保持和真人一样的温感，总之，感受到：竟然如此真实。
+          <div class="flex justify-center my-6">
+            <img 
+              src="25.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-red-500 mt-8 mb-4 pb-2 border-b border-gray-200">
+              04 恋人养成的情趣空间 PK排行+持久锻炼系统
+            </h2> 
+          <p class="article-text">你每次为IP女友注入元力，系统都会根据你的表现，计算出一定的元力值，这些元力值就是你为赛博世界做出的贡献度，也会影响你和元梦天使的亲密度，亲密度高了，你获得的互动反馈也将发生变化。<span class="font-bold">你连接飞机杯，在赛博世界里的各种玩乐过程，其实也是在养成属于自己的“女友”。</span>
+          <div class="flex justify-center my-6">
+            <img 
+              src="26.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+          <p class="article-text">你每次为她注入元力后，她还会给你提供细心的“战斗指导”，既让你在赛博世界里变得更强，也让你在现实世界的身体变得更强。（例如这位用户使用后的截图↓）
+          <div class="flex justify-center my-6">
+            <img 
+              src="27.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-dark mt-8 mb-4 pb-2 border-b border-gray-200">
+              元力数据曲线+科学“防沉迷”
+            </h2> 
+          <p class="article-text">当你的身体连接春风元力2 智能飞机杯，在赛博世界里“战斗”了多次之后，你就可以看到自己的成长曲线，它会将你的历史表现数据进行可视化呈现，让你看到自身能力的成长历程。<span class="font-bold">由于新版元力存档的数据极度详尽，你甚至能看到你和每个IP恋人的互动时长、次数、频率，时间精确到秒。</span>汇总数据还会贴心地给你算出总时长、平均时长等等，如此详细的数据其实就是一个科学的隐形“防沉迷”，让你随时根据自己做“运动”的表现数据，科学合理地安排“战斗计划”。
+          
+          <div class="flex justify-center my-6">
+            <img 
+              src="28.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-dark mt-8 mb-4 pb-2 border-b border-gray-200">
+              世界排行榜+“打排位”模式
+            </h2>   
+          <p class="article-text">很多用户还会想，我不仅想知道自己变强了，还想知道自己在世界上有多强。男生们这点争强好胜的心思，春风元力也考虑到了，App里面有专门的PK排行系统，每个用户都可以看到自己的世界排名，既有总榜，又有周榜，如果你足够强，还能登上赛博世界TOP100排行榜，这可以说是男生最强元力的权威认证。
+          <div class="flex justify-center my-6">
+            <img 
+              src="29.jpeg" 
+              alt="AI智能女友" 
+              class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+          <p class="article-text">上过榜的朋友，以后相亲、找对象，这项个人“特长”就是一个傲人优势呀。当然，产品也充分考虑到部分新手用户的难处，你可以选择不参加排名，或者等自己水平上去了再参加排名，让你毫无压力地在赛博世界里畅游。
+          <p class="article-text font-bold my-4 text-red-500">对春风元力2智能杯感兴趣的粉丝，可直接滑到本文底部，有专属限量的大额·惊·喜·券·哦！</p>
+         <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-dark mt-8 mb-4 pb-2 border-b border-gray-200">
+              持久锻炼系统
+            </h2>   
+          <p class="article-text">还有些男生用户，总想挑战极限，让自己不断进步。那就可以参加春风元力APP的持久训练。例如每周来两场【赛博之战】，一边驾驶轰炸机一边锻炼持久力，假以时日，一定会让自己的能力更上一个台阶，让伴侣竖起大拇指。
+          <div class="flex justify-center my-6">
+           <img 
+            src="30.jpeg" 
+            alt="AI智能女友" 
+            class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+          
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-dark mt-8 mb-4 pb-2 border-b border-gray-200">
+              经济系统
+            </h2>   
+          <p class="article-text">元力值还可以兑换成元力币，你在赛博世界参与的各种互动体验，例如赛博之战、元梦天使互动场等等，都可以赚取元力币。这些元力币可是好东西，你可以币兑商城中兑换各种好玩的物品（包括实物和虚拟物品）。
+          <div class="flex justify-center my-6">
+           <img 
+            src="31.jpeg" 
+            alt="AI智能女友" 
+            class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>  
+
+          <div class="prose max-w-none indent-paragraph leading-relaxed">
+            <h2 class="text-xl font-bold text-red-500 mt-8 mb-4 pb-2 border-b border-gray-200">
+              05 总结
+            </h2>   
+          <p class="article-text font-bold my-4">由春风元力APP驱动的元力2智能飞机杯，在人机体感交互上可以说是玩出花儿了。当你进入了春风为你营造的全新世界，沉浸式的互动体验将再次刷新你对快乐的认知。</p>
+          <div class="flex justify-center my-6">
+           <img 
+            src="32.jpeg" 
+            alt="AI智能女友" 
+            class="w-full max-w-md rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div> 
+          
+          <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 my-4 text-center 
+            transition-all duration-300 hover:shadow-md hover:bg-purple-100">
+            <p class="font-medium text-red-500"><span class="bg-yellow-300">【本文粉丝专属特惠入口】</span></p>
+            <p class="font-medium text-purple-700">春风元力2 智能杯特别惊喜来啦！特别惊喜仅限从以下专属入口获取哦～点击下方按钮，即刻扫码进店立享优惠～因大促热销及平台活动时间差异，如部分平台店铺短暂缺货，可切换电商平台店铺购买！</p>
+          </div>
+    
+    <!-- 底部按钮 -->
+    <div class="fixed bottom-6 left-0 right-0 flex justify-center z-40">
+      <button id="discountBtn" class="bg-accent hover:bg-accent/90 text-white font-bold py-4 px-8 rounded-full shadow-xl btn-pulse transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent/50">
+        <i class="fa fa-tags mr-2"></i>上方扫码进店立享优惠
+      </button>
+    </div>
+  </div>
+
+  <!-- 产品详情弹窗 -->
+  <div id="productModal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto m-4 transform transition-all duration-300 scale-95 opacity-0" id="modalContent">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 id="modalTitle" class="text-2xl font-bold text-dark"></h2>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+            <i class="fa fa-times text-xl"></i>
+          </button>
+        </div>
+        <div id="modalBody" class="prose max-w-none">
+          <!-- 产品详情内容将通过JS动态插入 -->
+        </div>
+        <div class="mt-6 flex justify-center">
+          <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg shadow transition-all duration-300 transform hover:scale-105 focus:outline-none">
+            立即购买
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 产品数据
+    const products = {
+      yuanli2: {
+        title: "春风元力2智能飞机杯",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="https://picsum.photos/seed/yuanli2/600/600" alt="春风元力2智能飞机杯" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3">产品特点</h3>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>7频智能震动，模拟真实体验</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>AI语音互动，带来全新感受</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>100%医用级硅胶，安全无毒</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>USB充电，续航持久</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>静音设计，使用无忧</span>
+                </li>
+              </ul>
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">用户评价</h4>
+                <div class="flex items-center mb-2">
+                  <div class="text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <span class="ml-2 text-gray-600">4.8/5 (120条评价)</span>
+                </div>
+                <p class="text-gray-700">"使用体验非常棒，材质柔软，震动频率多样，完全超出预期！"</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold mb-3">产品详情</h3>
+            <p>春风元力2智能飞机杯采用最新的智能传感技术，能够根据你的使用习惯自动调整震动模式和强度。其独特的AI语音互动功能，让你在使用过程中获得更加丰富的体验。</p>
+            <p class="mt-3">产品外壳采用人体工学设计，握感舒适，操作简单。内部采用100%医用级硅胶材质，安全无毒，柔软舒适，给你最真实的触感。</p>
+            <p class="mt-3">无论是单身还是情侣，春风元力2都能为你带来全新的愉悦体验。</p>
+          </div>
+        `
+      },
+      yuanli2se: {
+        title: "春风元力2SE智能飞机杯",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="https://picsum.photos/seed/yuanli2se/600/600" alt="春风元力2SE智能飞机杯" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3">产品特点</h3>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>5频智能震动，满足基本需求</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>智能APP控制，远程互动</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>100%医用级硅胶，安全无毒</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>USB充电，方便快捷</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>小巧便携，易于收纳</span>
+                </li>
+              </ul>
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">用户评价</h4>
+                <div class="flex items-center mb-2">
+                  <div class="text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                  <span class="ml-2 text-gray-600">4.2/5 (86条评价)</span>
+                </div>
+                <p class="text-gray-700">"性价比很高的一款产品，功能齐全，体积小巧，非常适合出差携带。"</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold mb-3">产品详情</h3>
+            <p>春风元力2SE智能飞机杯保留了核心功能的同时，更加注重性价比和便携性。5频智能震动模式，能够满足大多数用户的基本需求。</p>
+            <p class="mt-3">通过专属APP，你可以远程控制产品，与伴侣分享愉悦。无论是同城还是异地，都能保持亲密互动。</p>
+            <p class="mt-3">产品采用100%医用级硅胶材质，安全无毒，易于清洁。小巧的体积设计，方便携带和收纳，是旅行中的好伴侣。</p>
+          </div>
+        `
+      },
+      heidongplus: {
+        title: "春风黑洞plus智能飞机杯",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="https://picsum.photos/seed/heidongplus/600/600" alt="春风黑洞plus智能飞机杯" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3">产品特点</h3>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>9频超强震动，带来极致体验</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>仿生通道设计，真实触感</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>100%医用级硅胶，安全无毒</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>无线充电，防水设计</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>智能记忆，自动记录偏好</span>
+                </li>
+              </ul>
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">用户评价</h4>
+                <div class="flex items-center mb-2">
+                  <div class="text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <span class="ml-2 text-gray-600">4.9/5 (156条评价)</span>
+                </div>
+                <p class="text-gray-700">"绝对是市面上最好的飞机杯之一，无论是材质还是功能都无可挑剔，值得拥有！"</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold mb-3">产品详情</h3>
+            <p>春风黑洞plus智能飞机杯是一款专为追求极致体验的用户设计的高端产品。9频超强震动，配合独特的仿生通道设计，能够带给你前所未有的真实触感。</p>
+            <p class="mt-3">产品采用了最新的无线充电技术和防水设计，让你在使用过程中更加便捷和安全。智能记忆功能可以自动记录你的使用偏好，下次使用时无需重新设置。</p>
+            <p class="mt-3">无论是外观设计还是内在品质，春风黑洞plus都代表了行业的顶尖水平，是成人用品爱好者的不二之选。</p>
+          </div>
+        `
+      },
+      heidongpro: {
+        title: "春风黑洞pro智能飞机杯",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="https://picsum.photos/seed/heidongpro/600/600" alt="春风黑洞pro智能飞机杯" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3">产品特点</h3>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>12频智能震动，多重体验</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>AI智能学习，个性化定制</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>进口医用级硅胶，柔软细腻</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>快充技术，超长续航</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>10米远程遥控，异地互动</span>
+                </li>
+              </ul>
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">用户评价</h4>
+                <div class="flex items-center mb-2">
+                  <div class="text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <span class="ml-2 text-gray-600">4.7/5 (102条评价)</span>
+                </div>
+                <p class="text-gray-700">"黑洞pro的AI学习功能非常出色，能够根据我的喜好自动调整模式，真的很智能！"</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold mb-3">产品详情</h3>
+            <p>春风黑洞pro智能飞机杯是春风科技的旗舰产品，集多种先进技术于一身。12频智能震动系统，能够提供从温柔到激烈的多重体验。</p>
+            <p class="mt-3">独特的AI智能学习功能，可以通过分析你的使用习惯和反馈，为你量身定制专属的愉悦模式。进口医用级硅胶材质，不仅安全无毒，而且触感更加柔软细腻。</p>
+            <p class="mt-3">支持10米远程遥控，通过手机APP，即使与伴侣相隔千里，也能实时互动。快充技术让你无需长时间等待，随时享受愉悦时光。</p>
+          </div>
+        `
+      },
+      runhuashui: {
+        title: "春风元力伪装恋人润滑水",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="https://picsum.photos/seed/runhuashui/600/600" alt="春风元力伪装恋人润滑水" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3">产品特点</h3>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>水溶性配方，易清洗</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>无添加香料，温和无刺激</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>持久润滑，不易干燥</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>PH值平衡，呵护私密处</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check-circle text-green-500 mt-1 mr-2"></i>
+                  <span>小巧便携，旅行必备</span>
+                </li>
+              </ul>
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h4 class="font-bold mb-2">用户评价</h4>
+                <div class="flex items-center mb-2">
+                  <div class="text-yellow-400">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <span class="ml-2 text-gray-600">4.9/5 (203条评价)</span>
+                </div>
+                <p class="text-gray-700">"这款润滑水真的非常好用，没有任何异味，也不会粘腻，用完之后清洗也很容易。"</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-bold mb-3">产品详情</h3>
+            <p>春风元力伪装恋人润滑水采用先进的水溶性配方，温和无刺激，对人体和情趣用品都非常友好。无添加香料和色素，保持最纯净的使用体验。</p>
+            <p class="mt-3">独特的持久润滑技术，能够有效减少摩擦，延长愉悦时间，不易干燥。精心调节的PH值，与人体私密处的PH值相近，能够有效呵护敏感肌肤。</p>
+            <p class="mt-3">30ml的小巧包装，便于携带，无论是日常使用还是旅行外出，都能随时享受舒适体验。</p>
+          </div>
+        `
+      }
+    };
+
+    // DOM元素
+    const productModal = document.getElementById('productModal');
+    const modalContent = document.getElementById('modalContent');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const closeModal = document.getElementById('closeModal');
+    const productLinks = document.querySelectorAll('.product-link');
+    const discountBtn = document.getElementById('discountBtn');
+
+    // 侧边栏交互
+    const sidebar = document.getElementById('sidebar');
+    sidebar.addEventListener('mouseenter', () => {
+      sidebar.classList.add('bg-white/95');
+      sidebar.classList.remove('bg-white/20');
+    });
+    
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('bg-white/95');
+      sidebar.classList.add('bg-white/20');
+    });
+
+    // 产品弹窗功能
+    productLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const productId = link.getAttribute('data-product');
+        const product = products[productId];
+        
+        if (product) {
+          modalTitle.textContent = product.title;
+          modalBody.innerHTML = product.content;
+          
+          // 显示弹窗
+          productModal.classList.remove('hidden');
+          setTimeout(() => {
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+          }, 10);
+          
+          // 高亮当前选中的产品
+          productLinks.forEach(l => l.classList.remove('bg-primary/10', 'text-primary'));
+          link.classList.add('bg-primary/10', 'text-primary');
+        }
+      });
+    });
+
+    // 关闭弹窗
+    closeModal.addEventListener('click', () => {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        productModal.classList.add('hidden');
+      }, 300);
+    });
+
+    // 点击弹窗外部关闭弹窗
+    productModal.addEventListener('click', (e) => {
+      if (e.target === productModal) {
+        closeModal.click();
+      }
+    });
+
+    // 底部按钮动画效果
+    discountBtn.addEventListener('mouseenter', () => {
+      discountBtn.classList.add('shadow-2xl');
+    });
+    
+    discountBtn.addEventListener('mouseleave', () => {
+      discountBtn.classList.remove('shadow-2xl');
+    });
+
+    // 点击底部按钮跳转优惠页面
+    discountBtn.addEventListener('click', () => {
+      alert('即将跳转到优惠页面！');
+      // 实际应用中可以替换为真实的跳转链接
+      // window.location.href = 'https://example.com/promotion';
+    });
+
+    // 键盘ESC关闭弹窗
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !productModal.classList.contains('hidden')) {
+        closeModal.click();
+      }
+    });
+  </script>
+</body>
+</html>
+  
